@@ -1,0 +1,275 @@
+{% extends 'temp/base2.html' %}
+
+{% block main-panel %}
+    <!-- 展示页面 -->
+    <div class="container-fluid">
+        <div class="row mv-info">
+            <div class="col-md-12">
+                <div class="card card-chart">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="card m-auto main-poster" src="{{ poster }}"/>
+                        </div>
+                        <div class="col-md-8 m-3">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="bmd-label-floating">中文名</label>
+                                    <input type="text" class="form-control" value="{{ name_cn }}">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label class="bmd-label-floating">MID</label>
+                                    <input type="text" id="id" class="form-control" value="{{ id }}">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <form class="navbar-form">
+                                        <div class="input-group">
+                                            <input type="text" value="" class="form-control" placeholder="Search...">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-8">
+                                    <label class="bmd-label-floating">英文名</label>
+                                    <input type="text" class="form-control" value="{{ name_en }}">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label class="bmd-label-floating">豆瓣ID</label>
+                                    <input type="text" class="form-control" name="db_id" value="{{ db_id }}"
+                                           id="db_id">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <a href="javascript:" id="refresh" class="btn btn-primary btn-round">刷新</a>
+                                </div>
+                            </div>
+
+
+                            <div class=" row">
+                                <div class="form-group col-md-6">
+                                    <label class="bmd-label-floating">导演</label>
+                                    <input type="text" class="form-control" value="{{ director }}">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label class="bmd-label-floating">上映</label>
+                                    <input type="text" class="form-control" value="{{ publish_y }}">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label class="bmd-label-floating">大小</label>
+                                    <input type="text" class="form-control" value="{{ size }} GB">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="bmd-label-floating">主演</label>
+                                <input type="text" class="form-control" value="{{ starring }}">
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="bmd-label-floating">类型</label>
+                                    <input type="text" class="form-control" value="{{ tags }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="javascript:" id="play" class="btn btn-primary btn-round">播放</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="javascript:" id="folder" class="btn btn-primary btn-round">打开路径</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 占位 -->
+
+    <div class="container-fluid">
+        <div class="row blank"></div>
+        <!-- 列表 -->
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="{{ poster }}"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header">
+                        <div>
+                            <img class="card-icon list" src="/static/img/cover.jpg"/>
+                            <i class="material-icons"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                        <h3 class="card-title">49/50
+                            <small>GB</small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 懒加载 -->
+        <div class="row">
+            <div class="m-auto">
+                <a href="javascript:;" id="more" class="btn btn-primary btn-round">显示更多</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        // 菜单栏选中激活
+        $('#nav-movie').addClass('active');
+        $('#play').click(function () {
+            $.get('/open_file/', {}, function (ret) {
+                // $('#play').text(ret.message);
+            });
+            $.notify({ // 弹窗提示
+                icon: "add_alert",
+                message: "文件已打开"
+
+            }, {
+                type: 'info',
+                timer: 10,
+                placement: {
+                    from: 'top',
+                    align: 'right'
+                }
+            });
+        });
+        // 打开文件所在文件夹
+        $('#folder').click(function () {
+            $.get('/open_folder/', {}, function (ret) {
+
+            });
+        })
+
+        // 豆瓣id查询
+        $('#refresh').click(function () {
+            $.post('/get_info/', {
+                id: $('#id').val(),
+                db_id: $('#db_id').val(),
+                csrfmiddlewaretoken: '{{ csrf_token }}'  // csrf认证
+            }, function (ret) {
+                alert(ret.message)
+            })
+        })
+
+        // 显示更多
+        $('#more').click(function () {
+            $.get('/movie_list/', {}, function (ret) {
+                alert(ret.message)
+            })
+        })
+    </script>
+    <style>
+        .card {
+            border: 0;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+            color: #333333;
+            background: #fff;
+            width: 100%;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .main-poster {
+            top: 5px;
+            height: 290px;
+            width: auto;
+        }
+
+        .poster {
+            height: 260px;
+            width: auto;
+        }
+
+        .mv-info {
+            position: relative;
+            /* 固定位置悬浮 */
+            top: 10px;
+            margin-right: 15px;
+            z-index: 4;
+            /* 置于顶层 */
+        }
+
+        .list {
+            max-height: 400px;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .list:hover {
+            opacity: 0.6;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+
+{% endblock %}
